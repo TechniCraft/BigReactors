@@ -148,4 +148,10 @@ public class TileEntityTurbinePowerTap extends TileEntityTurbinePartStandard imp
 		return getTurbine().removeEnergy(energy);
 	}
 
+	@Override
+	public int getSourceTier() {
+		// TODO Auto-generated method stub
+		return 4;
+	}
+
 }

@@ -1153,4 +1153,9 @@ public class MultiblockTurbine extends RectangularMultiblockControllerBase imple
 		energyStored-=energy;
 		return energy;
 	}
+
+	@Override
+	public int getSourceTier() {
+		return Integer.MAX_VALUE;
+	}
 }

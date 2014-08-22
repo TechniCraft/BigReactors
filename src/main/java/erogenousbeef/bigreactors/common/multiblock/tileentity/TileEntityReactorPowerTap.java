@@ -167,4 +167,10 @@ public class TileEntityReactorPowerTap extends TileEntityReactorPart implements 
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public int getSourceTier() {
+		// TODO Auto-generated method stub
+		return 4;
+	}
 }

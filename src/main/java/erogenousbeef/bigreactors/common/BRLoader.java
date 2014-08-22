@@ -2,7 +2,6 @@ package erogenousbeef.bigreactors.common;
 
 import java.util.Arrays;
 
-import li.cil.oc.api.Items;
 import welfare93.bigreactors.packet.MainPacket;
 import welfare93.bigreactors.packet.PacketHandler;
 import net.minecraft.block.Block;

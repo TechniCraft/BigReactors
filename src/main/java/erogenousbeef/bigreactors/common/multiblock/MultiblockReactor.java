@@ -1397,22 +1397,24 @@ public class MultiblockReactor extends RectangularMultiblockControllerBase imple
 		worldObj.markTileEntityChunkModified(referenceCoord.x, referenceCoord.y, referenceCoord.z, saveTe);
 	}
 
+
+
 	@Override
-	public double demandedEnergyUnits() {
+	public double getDemandedEnergy() {
 		// TODO Auto-generated method stub
 		
 		return Math.floor(this.maxEnergyStored - this.energyStored);
 	}
 
 	@Override
-	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+	public double injectEnergy(ForgeDirection directionFrom, double amount,double voltage) {
 		int amtReceived = (int)Math.min(amount, Math.floor(this.maxEnergyStored - this.energyStored));
 			this.addStoredEnergy(amtReceived);
 		return amtReceived;
 	}
 
 	@Override
-	public int getMaxSafeInput() {
+	public int getSinkTier() {
 		// TODO Auto-generated method stub
 		return Integer.MAX_VALUE;
 	}
@@ -1442,4 +1444,5 @@ public class MultiblockReactor extends RectangularMultiblockControllerBase imple
 		energyStored-=energy;
 		return energy;
 	}
+
 }
